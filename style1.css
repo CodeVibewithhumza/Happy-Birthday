@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Great+Vibes&display=swap');
+
+body {
+    /*background: linear-gradient(to right, #ff758c, #ff7eb3);;*/
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('MainBackground.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .birthday-card {
+    position: fixed;    
+    width: 350px;
+    height: 525px;
+    border: 10px solid #E30B5C;
+    border-radius: 15px;
+    margin: 60px auto;
+    background-image: linear-gradient(to bottom, rgba(255, 192, 203, 0.8), rgba(255, 182, 193, 0.5)), url("Bd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 4px 20px rgba(255, 0, 100, 0.5);
+  }
+  
+  .birthday-card .text {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    font-family: 'Dancing Script', cursive;
+    color: #8b0000;
+    text-align: center;
+}
+
+.birthday-card .text > p {
+    font-size: 1.4em;
+    font-style: italic;
+    margin: 20px auto 0 auto;
+    color: #770737;
+}
+  
+.birthday-card .text .title {
+    font-size: 2.3em;
+    color: #ff004f;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 2px 2px 5px rgba(255, 0, 100, 0.5);
+    animation: glowText 1.5s infinite alternate;
+}
+
+/* Glowing Effect for Title */
+@keyframes glowText {
+    0% {
+        text-shadow: 2px 2px 10px rgba(255, 0, 100, 0.5);
+    }
+    100% {
+        text-shadow: 4px 4px 15px rgba(255, 0, 100, 0.8);
+    }
+}
+  
+  .birthday-card .cover-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0 0 -10px;
+    border: 10px solid #E0115F;
+    border-radius: 15px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+            transform: perspective(800px) rotateY(0deg);
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .birthday-card .cover-outer img {
+    -webkit-box-shadow: 0px 6px 11px 7px rgba(255, 0, 100, 0.22);
+            box-shadow: 0px 6px 11px 7px rgba(255, 0, 100, 0.22);
+    border-radius: 10px;
+  }
+  
+  .birthday-card .cover-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid rgba(255, 0, 100, 0.8);
+    background-color: #E0115F;
+    border-radius: 15px;
+    margin: -10px 0px 0 -10px;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+    -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: perspective(800px) rotateY(0deg);
+            transform: perspective(800px) rotateY(0deg);
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .birthday-card .cover-inner img {
+    -webkit-transform: rotateY(170deg);
+            transform: rotateY(170deg);
+  }
+  
+  .birthday-card:hover .cover-outer {
+    -webkit-transform: perspective(800px) rotateY(-170deg);
+            transform: perspective(800px) rotateY(-170deg);
+  }
+  
+  .birthday-card:hover .cover-inner {
+    -webkit-transform: perspective(800px) rotateY(-170deg);
+            transform: perspective(800px) rotateY(-170deg);
+    -webkit-box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .Name-Plate {
+    position:absolute;
+    margin-top: 545px;
+    margin-right:30px;
+    font-size: 12px;
+    font-family:cursive;
+    color: #ff004f;
+
+  }
+
+
+.name-tag {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
+    color: #ff004f;
+    opacity: 0.8;
+}
+
